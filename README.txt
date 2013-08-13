@@ -1,6 +1,12 @@
-A simple chat server using libevent.
+A simple chat server using libevent2
 -------------------------------------------------------------------------------
-Required libevent2, 
+This chat is based with https://github.com/jasonish/libevent-examples/tree/master/chat-server by Jason Ish.
+
+Changes:
+
+* Use evconnlistener_new_bind for bind port, much simpler.
+* Add evconnlistener_free because in some cases port is binded.
+* Add singal in SIGINT.
 
 
 USAGE
@@ -9,9 +15,10 @@ USAGE
 
         ./chat-server
 
-    Then telnet to localhost port 5555 from multiple terminals.
-    Anything you type in one terminal will be sent to the other
-    connected terminals.
+    In client:
+    	telnet localhost 5555
+    or
+    	nc localhost 5555
 
 --
-Jason Ish <ish@unx.ca>
+Agustí Moll <agusti@biruji.org>

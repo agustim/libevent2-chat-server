@@ -12,7 +12,7 @@
 #define STATUS_CHAT 2
 
 #define WELCOME_MESSAGE "Enter your nickname:"
-#define GOODBYE_MESSAGE "See you soon!\n"
+#define GOODBYE_MESSAGE "See you soon!"
 
 struct client {
 	/* The socket. */
